@@ -4,8 +4,23 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
-		<script src="script.js"></script>
+		<script src="script.js" defer></script>
 		<title>Awesome Chuck Norris Jokes Generator App</title>
 	</head>
-	<body></body>
+	<body>
+		<div class="wrapper">
+			<h2>Chuck Norris Jokes Generator</h2>
+			<form>
+				<div>
+					<label
+						>How many awesome jokes do you want to read? <input type="number"
+					/></label>
+				</div>
+				<div>
+					<button onclick="getJokes()">Get Jokes</button>
+				</div>
+			</form>
+			<ul></ul>
+		</div>
+	</body>
 </html>
