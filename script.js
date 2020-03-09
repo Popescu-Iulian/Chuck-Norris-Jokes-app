@@ -2,10 +2,10 @@ const JOKES_LIST = document.querySelector('ul');
 
 function getJokes(event) {
   event.preventDefault();
-  const JOKES_NUMBER = document.querySelector('input').value;
+  const JOKES_NUMBER = document.querySelector('input');
   const XHR = new XMLHttpRequest();
 
-  XHR.open('GET', `http://api.icndb.com/jokes/random/${JOKES_NUMBER}`, true);
+  XHR.open('GET', `http://api.icndb.com/jokes/random/${JOKES_NUMBER.value}`, true);
 
   XHR.onload = function () {
     if (this.status === 200) {
@@ -19,6 +19,8 @@ function getJokes(event) {
       JOKES_LIST.innerHTML = output;
     }
   }
+
+  JOKES_NUMBER.value = '';
 
   XHR.send();
 }
